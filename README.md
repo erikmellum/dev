@@ -142,14 +142,32 @@ fi
 
 ### .vimrc
 ```bash
-filetype plugin indent on
+set nocompatible
+set hidden
+set wildmenu
+set showcmd
+set hlsearch
+set ignorecase
+set smartcase
+set backspace=indent,eol,start
+set nostartofline
+set ruler
+set laststatus=2
+set confirm
+set visualbell
+set t_vb=
+set smartindent
+set cindent
+inoremap { {<CR>}<up><end><CR><Tab>
+set cmdheight=2
+set number
+set notimeout ttimeout ttimeoutlen=200
+set pastetoggle=<F11>
+map Y y$
+nnoremap <C-L> :nohl<CR><C-L>
 set tabstop=2
 set expandtab
 set shiftwidth=2
-set autoindent
-autocmd FileType make set noexpandtab|set autoindent
-autocmd FileType c set tabstop=2|set shiftwidth=2|set expandtab|set autoindent
-autocmd FileType cpp set tabstop=2|set shiftwidth=2|set expandtab|set autoindent
 syntax on
-colorscheme molokai
+set autoindent
 ```
