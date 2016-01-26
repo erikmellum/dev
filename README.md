@@ -171,3 +171,14 @@ set shiftwidth=2
 syntax on
 set autoindent
 ```
+
+
+### CPU Usage
+
+```bash
+top -F -R -o cpu
+```
+
+* -F: Do not calculate statistics on shared libraries, also known as frameworks.
+* -R: Do not traverse and report the memory object map for each process.
+* -o: cpu Order by CPU usage
